@@ -39,6 +39,7 @@ class HMConverter:
         phase_one = True
         for file in files_needed:
             try:
+                print(folder)
                 assert PathManager.exists(
                     os.path.join(folder, "hateful_memes", file)
                 ), f"{file} doesn't exist in {folder}"
