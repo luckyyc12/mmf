@@ -16,7 +16,7 @@ from transformers.modeling_bert import (
 )
 
 
-@registry.register_model("mmf_bert")
+@registry.register_model("mmf_bert_test")
 class MMFBert(Pythia):
     def __init__(self, config):
         super().__init__(config)
