@@ -339,7 +339,8 @@ class MMFBert(Pythia):
             joint_embedding = image_embedding_total
 
         output_dict = {}
-
+        if self.config.text_only:
+            joint_embedding = text_embedding_total
         pooled_output = self.pooler(joint_embedding)
 
         if "pretraining" in self.config.training_head_type:
